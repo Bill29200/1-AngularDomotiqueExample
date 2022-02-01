@@ -36,5 +36,9 @@ export class AppareilComponent implements OnInit {
     else
       return 'ON';
    }
+   onSupprimer()
+   {
+     this.appareilService.appareils.splice(this.indice,1);
+   }
 
 }
