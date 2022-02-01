@@ -1,8 +1,8 @@
 export class AppareilService {
     appareils:any[] = [
-        { name :'TV OLED', status:'allumé' },
-        { name :'Xbox', status:'éteint' },
-        { name :'Playstation', status:'éteint' }
+        { name :'Télé', status:'allumé' },
+        { name :'Ordinateur', status:'éteint' },
+        { name :'Machine à café', status:'éteint' }
         ];
     
     // tout allumer
