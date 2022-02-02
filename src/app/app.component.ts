@@ -11,7 +11,7 @@ export class AppComponent {
   appareils:any[] = [];
   bstate:any;
   info:any;
-  
+  nb= this.appareils.length;  
   //private appareilService:AppareilService;
   constructor(private appareilService:AppareilService){
    // this.appareilService = appareilService;
@@ -21,6 +21,8 @@ export class AppComponent {
     // je prends le tableau du service
     this.appareils = this.appareilService.appareils;
     this.bstate='ON';
+    this.nb=this.appareilService.appareils.length;
+    console.log(this.nb);
     
   }
     onAllumer(){
@@ -37,5 +39,10 @@ export class AppComponent {
       this.appareilService.appareils.push( { name :this.info, status:'éteint' });
       
       this.info='';
+      
+    }
+    getNb()
+    {
+      return this.appareilService.getNb();
     }
 }

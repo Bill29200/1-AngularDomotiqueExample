@@ -41,6 +41,7 @@ export class AppareilComponent implements OnInit {
      this.appareilService.appareils.splice(this.indice,1);
     
      
+     
    }
 
 }

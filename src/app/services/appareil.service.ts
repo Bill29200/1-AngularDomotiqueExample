@@ -4,7 +4,7 @@ export class AppareilService {
         { name :'Ordinateur', status:'éteint' },
         { name :'Machine à café', status:'éteint' }
         ];
-   
+    //nb=this.appareils.length; 
     // tout allumer
     switchAllOn(){
         for (let a of this.appareils){
@@ -27,6 +27,9 @@ export class AppareilService {
         this.appareils[i].status ='éteint';
 
     }
-   
+   getNb()
+   {
+       return this.appareils.length;
+   }
     
 }
