@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppareilComponent } from './appareil/appareil.component';
 import { AppareilService } from './services/appareil.service';
 
 @Component({
@@ -9,14 +10,18 @@ import { AppareilService } from './services/appareil.service';
 export class AppComponent {
   appareils:any[] = [];
   bstate:any;
+  info:any;
+  
   //private appareilService:AppareilService;
   constructor(private appareilService:AppareilService){
    // this.appareilService = appareilService;
+   
   }
   ngOnInit(){
     // je prends le tableau du service
     this.appareils = this.appareilService.appareils;
     this.bstate='ON';
+    
   }
     onAllumer(){
      this.appareilService.switchAllOn();
@@ -25,5 +30,12 @@ export class AppComponent {
     onEteindre(){
       this.appareilService.switchAllOff();
       this.bstate='OFF';
+    }
+    onAjouter()
+    {
+      
+      this.appareilService.appareils.push( { name :this.info, status:'éteint' });
+      
+      this.info='';
     }
 }

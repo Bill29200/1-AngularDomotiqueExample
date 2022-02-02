@@ -17,6 +17,10 @@
                     height="100" />
                 <img *ngIf="appareil.status ==='allumé'" alt="ON" src="assets/on.png" class="rounded" [width]="100"
                     height="100" />
+                    &nbsp;
+                    <button class="btn btn-warning" (click)="onSupprimer()">
+                        Delete
+                    </button>
             </div>
         </div>
         <div class="row">
@@ -26,10 +30,8 @@
     'btn-danger': appareil.status === 'allumé',
     'btn-success': appareil.status === 'éteint'
 }" (click)="onChange()">{{ getNom() }}</button>
-                 &nbsp;
-                 <button class="btn btn-warning" (click)="onSupprimer()">
-                    Delete
-                </button>
+                 
+                 
             </div>
             <div class="col-md-6">
                 <h5 class="text-secondary" *ngIf="appareil.status ==='éteint'">

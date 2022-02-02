@@ -1,7 +1,21 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6">
-			<h1 >Mes Appareils</h1>
+			<h1 >Mes Appareils </h1>
+			
+			<br> 
+			<div>
+				<div class="row">
+					<div class="col-9">
+						<input [(ngModel)]="info" id="item" class="form-control" placeholder="Nouvelle appareil">
+					</div>
+					<div class="col-3">
+						<button class="btn btn-primary" (click)="onAjouter()" >
+							Add
+						</button>
+					</div>
+			</div>
+			<br>
 			<ul class="list-group mb-2">
 				
 			<app-appareil 
